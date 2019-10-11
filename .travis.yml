@@ -4,8 +4,8 @@ python:
  - 3.7
 
 # before install
-before_install:
- - sed "/django-heroku/d" requirements.txt > requirements-build.txt
+#before_install:
+# - sed "/django-heroku/d" requirements.txt > requirements-build.txt
 
 # install dependencies
 install:
@@ -16,10 +16,10 @@ before_script:
  - python manage.py collectstatic --noinput
 
 script:
-# - black --check . 
-# - flake8 . 
-# - coverage run --source=swe1app,polls manage.py test
+ - black --check . 
+ - flake8 . 
+ - coverage run --source=swe1app,polls manage.py test
  - python manage.py test polls
 
-#after_script:
-# - coveralls
+after_script:
+ - coveralls
