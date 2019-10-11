@@ -5,7 +5,7 @@ python:
 
 # before install
 before_install:
- - sed '/django-heroku' requirements.txt > requirements-build.txt
+ - sed "/django-heroku" requirements.txt > requirements-build.txt
 
 # install dependencies
 install:
