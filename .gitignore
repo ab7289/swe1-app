@@ -27,6 +27,7 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+staticfiles/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -105,3 +106,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+*.DS_Store
+.vscode/

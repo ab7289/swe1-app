@@ -2,16 +2,16 @@ from django.urls import path
 
 from . import views
 
-## namespaces the apps so that the url template function can find the
-## right app
-app_name = 'polls'
+# namespaces the apps so that the url template function can find the
+# right app
+app_name = "polls"
 urlpatterns = [
-    ## ex: /polls/
-    path('', views.IndexView.as_view(), name='index'),
-    ## ex: /polls/5/
-    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
-    ## ex: /polls/5/results
-    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
-    ## ex: /polls/5/vote/
-    path('<int:question_id>/vote/', views.vote, name='vote')
+    # ex: /polls/
+    path("", views.IndexView.as_view(), name="index"),
+    # ex: /polls/5/
+    path("<int:pk>/", views.DetailView.as_view(), name="detail"),
+    # ex: /polls/5/results
+    path("<int:pk>/results/", views.ResultsView.as_view(), name="results"),
+    # ex: /polls/5/vote/
+    path("<int:question_id>/vote/", views.vote, name="vote"),
 ]
