@@ -19,7 +19,6 @@ script:
  - black --check . 
  - flake8 . 
  - coverage run --source=swe1app,polls manage.py test
- - python manage.py test polls
 
 after_script:
  - coveralls
